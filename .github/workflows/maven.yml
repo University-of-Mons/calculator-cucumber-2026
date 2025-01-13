@@ -41,7 +41,7 @@ jobs:
     - id: testreport
       name: Publish Test Report
       if: ${{ always() }}
-      uses: scacap/action-surefire-report@a2911bd1a4412ec18dde2d93b1758b3e56d2a880 # v1.8.0
+      uses: scacap/action-surefire-report@1a128e49c0585bc0b8e38e541ac3b6e35a5bc727 # v1.9.0
       
     - name: Generate JaCoCo Badge
       id: jacoco
