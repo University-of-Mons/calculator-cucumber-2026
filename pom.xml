@@ -15,7 +15,7 @@
         <slf4j.version>2.0.6</slf4j.version>
         <logback.version>1.4.5</logback.version>
         <java.version>23</java.version>
-        <junit-jupiter.version>5.11.4</junit-jupiter.version>
+        <junit-jupiter.version>5.12.0</junit-jupiter.version>
         <junit-platform-suite.version>1.11.4</junit-platform-suite.version>
         <cucumber.version>7.20.1</cucumber.version>
         <jacoco.version>0.8.12</jacoco.version>
