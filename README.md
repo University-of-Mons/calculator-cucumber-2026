@@ -22,7 +22,7 @@ The BDD scenarios are specified as .feature files in the src\test\resources dire
 
 ### Prerequisites
 
-*  You will need to have a running version of Java 23 on your machine in order to be able to compile and execute this code, although it is also backward compatible with earlier versions of Java.
+*  You will need to have a running version of Java 25 on your machine in order to be able to compile and execute this code, although it is also backward compatible with earlier versions of Java.
 *  You will need to have a running version of Maven, since this project is accompanied by a pom.xml file so that it can be installed, compiled, tested and run using Maven.
 
 ### Installation and testing instructions
