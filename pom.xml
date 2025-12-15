@@ -16,7 +16,7 @@
         <logback.version>1.4.5</logback.version>
         <java.version>23</java.version>
         <junit-jupiter.version>5.11.4</junit-jupiter.version>
-        <junit-platform-suite.version>1.11.4</junit-platform-suite.version>
+        <junit-platform-suite.version>6.0.1</junit-platform-suite.version>
         <cucumber.version>7.21.1</cucumber.version>
         <jacoco.version>0.8.12</jacoco.version>
         <javadoc.version>3.11.2</javadoc.version>
