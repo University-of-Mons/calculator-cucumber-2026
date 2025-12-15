@@ -25,7 +25,7 @@
 
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.version>3.13.0</maven.compiler.version>
+        <maven.compiler.version>3.14.0</maven.compiler.version>
         <!-- As of JDK 23, annotation processing is only run with some explicit configuration
              of annotation processing or with an explicit request to run annotation processing
              on the javac command line. This is a change in behavior from the existing default
