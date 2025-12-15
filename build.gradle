@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+group 'calculator'
+version '1.0-SNAPSHOT'
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(23))
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testImplementation 'io.cucumber:cucumber-java:7.21.1'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.21.1'
+}
+
+test {
+    useJUnitPlatform()
+    jacoco {
+        toolVersion = '0.8.12'
+    }
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+}
