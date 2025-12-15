@@ -26,6 +26,8 @@ jobs:
       uses: gradle/gradle-build-action@v3
         
   build:
+    needs: setup
+    steps:
     - name: Build Project
       run: gradle clean build
 
