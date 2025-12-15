@@ -27,6 +27,7 @@ jobs:
         
   build:
     needs: setup
+    runs-on: ubuntu-latest
     steps:
     - name: Build Project
       run: gradle clean build
