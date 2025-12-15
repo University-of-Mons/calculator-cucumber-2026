@@ -1,0 +1,57 @@
+name: Build, Test, and Coverage Report
+
+on:
+  push:
+    branches:
+      - update-build-and-workflow
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '23'
+
+    - name: Build Project
+      run: ./gradlew clean build
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '23'
+
+    - name: Run JUnit and Cucumber Tests
+      run: ./gradlew test
+
+  coverage:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '23'
+
+    - name: Generate Coverage Report
+      run: ./gradlew jacocoTestReport
