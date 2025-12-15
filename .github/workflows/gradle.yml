@@ -9,7 +9,8 @@ on:
       - main
 
 jobs:
-  build:
+
+  setup:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
@@ -21,8 +22,12 @@ jobs:
         distribution: 'temurin'
         java-version: '23'
 
+    - name: Set up Gradle
+      uses: gradle/gradle-build-action@v3
+        
+  build:
     - name: Build Project
-      run: ./gradlew clean build
+      run: gradle clean build
 
   test:
     needs: build
@@ -38,7 +43,7 @@ jobs:
         java-version: '23'
 
     - name: Run JUnit and Cucumber Tests
-      run: ./gradlew test
+      run: gradle test
 
   coverage:
     needs: test
@@ -54,4 +59,4 @@ jobs:
         java-version: '23'
 
     - name: Generate Coverage Report
-      run: ./gradlew jacocoTestReport
+      run: gradle jacocoTestReport
