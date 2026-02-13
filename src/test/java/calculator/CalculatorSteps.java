@@ -12,8 +12,6 @@ import java.util.List;
 
 public class CalculatorSteps {
 
-//	static final Logger log = getLogger(lookup().lookupClass());
-
 	private ArrayList<Expression> params;
 	private Operation op;
 	private Calculator c;
@@ -41,7 +39,7 @@ public class CalculatorSteps {
 				case "/"	->	op = new Divides(params);
 				default		->	fail();
 			}
-		} catch (IllegalConstruction e) {
+		} catch (IllegalConstruction _) {
 			fail();
 		}
 	}
@@ -71,7 +69,7 @@ public class CalculatorSteps {
 		    params.add(new MyNumber(n1));
 		    params.add(new MyNumber(n2));
 		    op = new Plus(params);}
-		catch(IllegalConstruction e) { fail(); }
+		catch(IllegalConstruction _) { fail(); }
 	}
 
 	@Then("^its (.*) notation is (.*)$")
@@ -102,7 +100,7 @@ public class CalculatorSteps {
 				default -> fail();
 			}
 			assertEquals(val, c.eval(op));
-		} catch (IllegalConstruction e) {
+		} catch (IllegalConstruction _) {
 			fail();
 		}
 	}

@@ -40,7 +40,7 @@ class TestEvaluator {
                 case "/"	->	assertEquals( value1 / value2, calc.eval(new Divides(params)));
                 default		->	fail();
             }
-        } catch (IllegalConstruction e) {
+        } catch (IllegalConstruction _) {
             fail();
         }
     }

@@ -3,6 +3,7 @@ package calculator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * A very simple calculator in Java
@@ -24,6 +25,7 @@ public class Main {
 
   	Expression e;
   	Calculator c = new Calculator();
+	Logger logger = Logger.getLogger(Main.class.getName());
 
 	try{
 
@@ -56,8 +58,8 @@ public class Main {
 		c.eval(e);
 	}
 
-	catch(IllegalConstruction exception) {
-		System.out.println("cannot create operations without parameters");
+	catch(IllegalConstruction _) {
+		logger.info("cannot create operations without parameters");
 		}
  	}
 

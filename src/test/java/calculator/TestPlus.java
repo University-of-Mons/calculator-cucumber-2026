@@ -19,7 +19,7 @@ class TestPlus {
 	void setUp() {
 		  params = new ArrayList<>(Arrays.asList(new MyNumber(value1),new MyNumber(value2)));
 		  try { op = new Plus(params); }
-		  catch(IllegalConstruction e) { fail(); }
+		  catch(IllegalConstruction _) { fail(); }
 	}
 
 	@Test
@@ -34,7 +34,7 @@ class TestPlus {
 		// A Times expression should not be the same as a Plus expression
 		try {
 			assertNotSame(op, new Times(new ArrayList<>()));
-		} catch (IllegalConstruction e) {
+		} catch (IllegalConstruction _) {
 			fail();
 		}
 	}
@@ -49,7 +49,7 @@ class TestPlus {
 			assertEquals(e, e);
 			assertNotEquals(e, new Plus(new ArrayList<>(Arrays.asList(new MyNumber(5), new MyNumber(4))), Notation.INFIX));
 		}
-		catch(IllegalConstruction e) { fail(); }
+		catch(IllegalConstruction _) { fail(); }
 	}
 
 	@SuppressWarnings("ConstantConditions")
@@ -66,7 +66,7 @@ class TestPlus {
 			Plus e = new Plus(p, Notation.INFIX);
 			assertEquals(e.hashCode(), op.hashCode());
 		}
-		catch(IllegalConstruction e) { fail(); }
+		catch(IllegalConstruction _) { fail(); }
 	}
 
 	@Test

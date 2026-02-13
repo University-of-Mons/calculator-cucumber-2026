@@ -11,10 +11,9 @@ import java.util.ArrayList;
  */
 public class Evaluator extends Visitor {
 
-    /**
-     * Default constructor of the class. Does not initialise anything.
-     */
-    public Evaluator() {}
+     public Evaluator() {
+         //Default constructor of the class. Does not initialise anything.
+     }
 
     /** The result of the evaluation will be stored in this private variable */
     private int computedValue;
