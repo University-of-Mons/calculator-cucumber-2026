@@ -1,5 +1,5 @@
 [![](https://img.shields.io/github/v/release/University-of-Mons/calculator-cucumber-2026?label=Latest%20Release)](https://github.com/University-of-Mons/calculator-cucumber/releases/latest)
-[![](https://img.shields.io/badge/Java-${java.version}-orange?logo=java&logoColor=white)](https://openjdk.org/)
+
 
 Code quality: ![Maven Build](https://github.com/University-of-Mons/calculator-cucumber-2026/actions/workflows/maven.yml/badge.svg)
 
@@ -18,8 +18,8 @@ This repository contains Java code for computing arithmetic expressions. It is d
 ### Unit testing and BDD
 
 *  All tests can be found in the src\test directory. They serve as executable documentation of the source code.
-*  The source code is accompanied by a set of JUnit 5 unit tests. These tests can be written and run in the usual way. If you are not familiar with unit testing or JUnit 5, please refer to https://junit.org/junit5/.
-*  The source code is accompanied by a set of Cucumber BDD scenarios, also running in Junit. If you are not familiar with Cucumber and BDD, please refer to https://cucumber.io/docs/cucumber/.
+*  The source code is accompanied by a set of JUnit tests. These tests can be written and run in the usual way. If you are not familiar with unit testing or JUnit, please refer to https://docs.junit.org.
+*  The source code is accompanied by a set of Cucumber BDD test scenarios, also running in Junit. If you are not familiar with Cucumber and BDD, please refer to https://cucumber.io/docs/cucumber/.
 The BDD scenarios are specified as .feature files in the src\test\resources directory. Some classes defined in src\test take care of converting these scenarios to executable JUnit tests.
 
 ### Prerequisites
@@ -35,22 +35,23 @@ The BDD scenarios are specified as .feature files in the src\test\resources dire
 *  The tests and BDD scenarios are executable with Maven using "mvn test"
 *  Note that the tests are also executed when you do a "mvn install". It is possible to skip those tests by providing an extra parameter. For details of more advanced uses of Maven, please refer to its official documentation https://maven.apache.org/guides/.
 
-### Test coverage and JavaDoc reporting
+### Test reporting, test coverage and JavaDoc
 
+* Test reports in html format will be generated somewherein the target/ directory.
 *  In addition to testing the code, "mvn test" will also generate a test coverage report (in HTML format) using JaCoCo. This test coverage is generated in target/site/jacoco.
 *  When packaging the code using "mvn package" the JavaDoc code documentation will be generated and stored in target/site/apidocs.
 
 ## Built With
 
 *  [Maven](https://maven.apache.org/) - an open source build automation and dependency management tool
-*  [JUnit5](https://junit.org/junit5/) - a unit testing framework for Java
+*  [JUni6](https://junit.org) - a unit testing framework for Java
 *  [Cucumber](https://cucumber.io/docs/cucumber/) - a tool for Behaviour-Driven Development
 *  [JaCoCo](https://www.jacoco.org) - a code coverage library for Java
-*  [JavaDoc](https://docs.oracle.com/en/java/javase/21/javadoc/javadoc.html) - a code documentation tool for Java
+*  [JavaDoc](https://docs.oracle.com/en/java/javase/25/javadoc/) - a code documentation tool for Java
 
 ## Versions
 
-We use [SemVer](http://semver.org/) for semantic versioning. For the versions available, see the [tags on this repository](https://github.com/University-of-Mons/calculator-cucumber-2025/tags). 
+We use [SemVer](http://semver.org/) for semantic versioning. For the versions available, see the [tags on this repository](https://github.com/University-of-Mons/calculator-cucumber-2026/tags). 
 
 ## Contributors
 
