@@ -54,7 +54,6 @@ public class CalculatorSteps {
 		// Since we only use one line of input, we use get(0) to take the first line of the list,
 		// which is a list of strings, that we will manually convert to integers:
 		numbers.get(0).forEach(n -> params.add(new MyNumber(Integer.parseInt(n))));
-	    params.forEach(n -> System.out.println("value ="+ n));
 		op = null;
 	}
 
@@ -74,7 +73,7 @@ public class CalculatorSteps {
 
 	@Then("^its (.*) notation is (.*)$")
 	public void thenItsNotationIs(String notation, String s) {
-		if (notation.equals("PREFIX")||notation.equals("POSTFIX")||notation.equals("INFIX")) {
+		if ("PREFIX".equals(notation)||"POSTFIX".equals(notation)||"INFIX".equals(notation)) {
 			op.notation = Notation.valueOf(notation);
 			assertEquals(s, op.toString());
 		}

@@ -4,4 +4,9 @@
 *.ipr
 *.DS_Store
 .idea/*
+.vscode/*
 
+
+target/*
+
+structure101-settings.java.hsw

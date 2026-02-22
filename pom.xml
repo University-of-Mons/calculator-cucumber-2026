@@ -5,7 +5,7 @@
     <groupId>calculator</groupId>
     <artifactId>calculator-cucumber</artifactId>
     <version>0.5.0</version>
-    <name>Calculator with JUnit5 and Cucumber tests</name>
+    <name>Calculator with JUnit Platform Suite and Cucumber tests</name>
 
     <properties>
         <project.encoding>UTF-8</project.encoding>
@@ -16,7 +16,7 @@
         <logback.version>1.4.5</logback.version>
         <java.version>25</java.version>
         <junit-jupiter.version>5.11.4</junit-jupiter.version>
-        <junit-platform-suite.version>1.11.4</junit-platform-suite.version>
+        <junit-platform.version>1.11.4</junit-platform.version>
         <cucumber.version>7.21.1</cucumber.version>
         <jacoco.version>0.8.14</jacoco.version>
         <javadoc.version>3.12.0</javadoc.version>
@@ -48,8 +48,8 @@
         </dependency>
         <dependency>
             <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-suite</artifactId>
-            <version>${junit-platform-suite.version}</version>
+            <artifactId>junit-platform-suite-engine</artifactId>
+            <version>${junit-platform.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
