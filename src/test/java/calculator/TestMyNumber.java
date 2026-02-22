@@ -18,19 +18,42 @@ class TestMyNumber {
 	}
 
 	@Test
-	@DisplayName("MyNumber equality should work correctly")
-	void testEquals() {
-		// Two distinct MyNumber, constructed separately (using a different constructor) but containing the same value should be equal
+	@DisplayName("MyNumber with same value should be equal")
+	void testEqualsSameValue() {
+		// Two distinct MyNumber, constructed separately but containing the same value should be equal
 		assertEquals(new MyNumber(value), number);
-		// Two MyNumbers containing a distinct value should not be equal:
-		int otherValue = 7;
-		assertNotEquals(new MyNumber(otherValue),number);
-		assertEquals(number, number); // Identity check (for coverage, as this should always be true)
-		assertNotEquals(number, value); // number is of type MyNumber, while value is of type int, so not equal
+	}
+
+	@Test
+	@DisplayName("MyNumber with different value should not be equal")
+	void testEqualsDifferentValue() {
+		// Two MyNumbers containing a distinct value should not be equal
+		assertNotEquals(new MyNumber(7), number);
+	}
+
+	@Test
+	@DisplayName("MyNumber should be equal to itself")
+	void testEqualsIdentity() {
+		// Identity check (for coverage, as this should always be true)
+		assertEquals(number, number);
+	}
+
+	@Test
+	@DisplayName("MyNumber should not be equal to different type")
+	void testEqualsDifferentType() {
+		// number is of type MyNumber, while 8 is of type int, so not equal
+		assertNotEquals(number, 8);
+	}
+
+	@Test
+	@DisplayName("MyNumber should not be equal to different operation")
+	void testEqualsDifferentOperation() {
 		try {
 			assertNotEquals(new Times(new ArrayList<>()), number);
 		}
-		catch (IllegalConstruction _) {fail();}
+		catch (IllegalConstruction _) {
+			fail();
+		}
 	}
 
 	@Test
