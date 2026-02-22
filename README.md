@@ -1,4 +1,5 @@
 [![](https://img.shields.io/github/v/release/University-of-Mons/calculator-cucumber-2026?label=Latest%20Release)](https://github.com/University-of-Mons/calculator-cucumber/releases/latest)
+[![](https://img.shields.io/badge/Java-${java.version}-orange?logo=java&logoColor=white)](https://openjdk.org/)
 
 Code quality: ![Maven Build](https://github.com/University-of-Mons/calculator-cucumber-2026/actions/workflows/maven.yml/badge.svg)
 
