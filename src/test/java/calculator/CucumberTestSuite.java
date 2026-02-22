@@ -14,6 +14,6 @@ import org.junit.platform.suite.api.Suite;
 @SelectPackages("calculator")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "calculator")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "html:target/cucumber-reports.html")
-public class CucumberTest {
+public class CucumberTestSuite {
 
 }
