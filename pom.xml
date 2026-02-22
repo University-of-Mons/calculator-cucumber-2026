@@ -82,6 +82,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
+                    <includes>
+                        <include>**/AllTestsSuite.java</include>
+                    </includes>
                     <properties>
                         <configurationParameters>
                             cucumber.junit-platform.naming-strategy=long
