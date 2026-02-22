@@ -2,6 +2,7 @@ package calculator;
 
 //Import Junit5 libraries for unit testing:
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -11,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
+@DisplayName("Counting operations for expressions")
 class TestCounting {
 
     private int value1, value2;
@@ -24,6 +26,7 @@ class TestCounting {
     }
 
     @Test
+    @DisplayName("MyNumber should have zero depth, zero operations, and one number")
     void testNumberCounting() {
         e = new MyNumber(value1);
         //test whether a number has zero depth (i.e. no nested expressions)
@@ -36,6 +39,7 @@ class TestCounting {
 
     @ParameterizedTest
     @ValueSource(strings = {"*", "+", "/", "-"})
+    @DisplayName("Binary operations should have depth 1, one operation, and two numbers")
     void testOperationCounting(String symbol) {
         List<Expression> params = Arrays.asList(new MyNumber(value1),new MyNumber(value2));
         try {

@@ -2,6 +2,7 @@ package calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -9,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
+@DisplayName("Notation format tests")
 class TestNotation {
 
     /* This is an auxilary method to avoid code duplication.
@@ -32,6 +34,7 @@ class TestNotation {
 
 	@ParameterizedTest
 	@ValueSource(strings = {"*", "+", "/", "-"})
+	@DisplayName("Operations should format correctly in all notations")
 	void testOutput(String symbol) {
 		int value1 = 8;
 		int value2 = 6;

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 
+@DisplayName("MyNumber tests")
 class TestMyNumber {
 
 	private final int value =8;
@@ -17,6 +18,7 @@ class TestMyNumber {
 	}
 
 	@Test
+	@DisplayName("MyNumber equality should work correctly")
 	void testEquals() {
 		// Two distinct MyNumber, constructed separately (using a different constructor) but containing the same value should be equal
 		assertEquals(new MyNumber(value), number);
@@ -32,6 +34,7 @@ class TestMyNumber {
 	}
 
 	@Test
+	@DisplayName("MyNumber toString should return numeric value")
 	void testToString() {
 		assertEquals(Integer.toString(value), number.toString());
 	}

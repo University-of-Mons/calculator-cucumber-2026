@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@DisplayName("Subtraction operation tests")
 class TestMinus {
 
 	private final int value1 = 8;
@@ -23,6 +24,7 @@ class TestMinus {
 	}
 
 	@Test
+	@DisplayName("Minus constructor should reject null parameter list")
 	void testConstructor1() {
 		// It should not be possible to create an expression without null parameter list
 		assertThrows(IllegalConstruction.class, () -> op = new Minus(null));
@@ -30,6 +32,7 @@ class TestMinus {
 
 	@SuppressWarnings("AssertBetweenInconvertibleTypes")
 	@Test
+	@DisplayName("Minus expression should not be same as Times expression")
 	void testConstructor2() {
 		// A Times expression should not be the same as a Minus expression
 		try {
@@ -40,6 +43,7 @@ class TestMinus {
 	}
 
 	@Test
+	@DisplayName("Two similar Minus expressions should be equal")
 	void testEquals() {
 		// Two similar expressions, constructed separately (and using different constructors) should not be equal
 		List<Expression> p = Arrays.asList(new MyNumber(value1), new MyNumber(value2));
@@ -52,11 +56,13 @@ class TestMinus {
 
 	@SuppressWarnings("ConstantConditions")
 	@Test
+	@DisplayName("Null comparison should not throw exception")
 	void testNull() {
 		assertDoesNotThrow(() -> op==null); // Direct way to to test if the null case is handled.
 	}
 
 	@Test
+	@DisplayName("Two similar Minus expressions should have same hashcode")
 	void testHashCode() {
 		// Two similar expressions, constructed separately (and using different constructors) should have the same hashcode
 		List<Expression> p = Arrays.asList(new MyNumber(value1), new MyNumber(value2));
@@ -67,10 +73,6 @@ class TestMinus {
 		catch(IllegalConstruction _) { fail(); }
 	}
 
-	@Test
-	void testNullParamList() {
-		params = null;
-		assertThrows(IllegalConstruction.class, () -> op = new Minus(params));
-	}
+
 
 }

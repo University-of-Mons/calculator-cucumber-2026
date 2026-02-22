@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.Arrays;
 import java.util.List;
 
+@DisplayName("Expression evaluator tests")
 class TestEvaluator {
 
     private Calculator calc;
@@ -22,12 +23,14 @@ class TestEvaluator {
     }
 
     @Test
+    @DisplayName("MyNumber evaluation should return its value")
     void testEvaluatorMyNumber() {
         assertEquals( value1, calc.eval(new MyNumber(value1)));
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"*", "+", "/", "-"})
+    @DisplayName("Arithmetic operations should evaluate correctly")
     void testEvaluateOperations(String symbol) {
         List<Expression> params = Arrays.asList(new MyNumber(value1),new MyNumber(value2));
         try {

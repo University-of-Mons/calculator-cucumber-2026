@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@DisplayName("Plus operation tests")
 class TestPlus {
 
 	private final int value1 = 8;
@@ -23,6 +24,7 @@ class TestPlus {
 	}
 
 	@Test
+	@DisplayName("Plus constructor should reject null parameter list")
 	void testConstructor1() {
 		// It should not be possible to create a Plus expression without null parameter list
 		assertThrows(IllegalConstruction.class, () -> op = new Plus(null));
@@ -30,6 +32,7 @@ class TestPlus {
 
 	@SuppressWarnings("AssertBetweenInconvertibleTypes")
 	@Test
+	@DisplayName("Plus expression should not be same as Times expression")
 	void testConstructor2() {
 		// A Times expression should not be the same as a Plus expression
 		try {
@@ -40,6 +43,7 @@ class TestPlus {
 	}
 
 	@Test
+	@DisplayName("Two similar Plus expressions should be equal")
 	void testEquals() {
 		// Two similar expressions, constructed separately (and using different constructors) should be equal
 		ArrayList<Expression> p = new ArrayList<>(Arrays.asList(new MyNumber(value1), new MyNumber(value2)));
@@ -54,11 +58,13 @@ class TestPlus {
 
 	@SuppressWarnings("ConstantConditions")
 	@Test
+	@DisplayName("Null comparison should not throw exception")
 	void testNull() {
 			assertDoesNotThrow(() -> op==null); // Direct way to to test if the null case is handled.
 	}
 
 	@Test
+	@DisplayName("Two similar Plus expressions should have same hashcode")
 	void testHashCode() {
 		// Two similar expressions, constructed separately (and using different constructors) should have the same hashcode
 		ArrayList<Expression> p = new ArrayList<>(Arrays.asList(new MyNumber(value1), new MyNumber(value2)));
@@ -69,10 +75,5 @@ class TestPlus {
 		catch(IllegalConstruction _) { fail(); }
 	}
 
-	@Test
-	void testNullParamList() {
-		params = null;
-		assertThrows(IllegalConstruction.class, () -> op = new Plus(params));
-	}
 
 }

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@DisplayName("Multiplication operation tests")
 class TestTimes {
 
 	private final int value1 = 8;
@@ -23,12 +24,14 @@ class TestTimes {
 	}
 
 	@Test
+	@DisplayName("Times constructor should reject null parameter list")
 	void testConstructor1() {
 		// It should not be possible to create an expression without null parameter list
 		assertThrows(IllegalConstruction.class, () -> op = new Times(null));
 	}
 
 	@Test
+	@DisplayName("Times expression should not be same as Plus expression")
 	void testConstructor2() {
 		// A Plus expression should not be the same as a Times expression
 		try {
@@ -39,6 +42,7 @@ class TestTimes {
 	}
 
 	@Test
+	@DisplayName("Two similar Times expressions should be equal")
 	void testEquals() {
 		// Two similar expressions, constructed separately (and using different constructors) should not be equal
 		List<Expression> p = Arrays.asList(new MyNumber(value1), new MyNumber(value2));
@@ -50,11 +54,13 @@ class TestTimes {
 	}
 
 	@Test
+	@DisplayName("Null comparison should not throw exception")
 	void testNull() {
 		assertDoesNotThrow(() -> op==null); // Direct way to test if the null case is handled.
 	}
 
 	@Test
+	@DisplayName("Two similar Times expressions should have same hashcode")
 	void testHashCode() {
 		// Two similar expressions, constructed separately (and using different constructors) should have the same hashcode
 		List<Expression> p = Arrays.asList(new MyNumber(value1), new MyNumber(value2));
@@ -65,10 +71,5 @@ class TestTimes {
 		catch(IllegalConstruction _) { fail(); }
 	}
 
-	@Test
-	void testNullParamList() {
-		params = null;
-		assertThrows(IllegalConstruction.class, () -> op = new Times(params));
-	}
 
 }

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@DisplayName("Division operation tests")
 class TestDivides {
 
 	private final int value1 = 8;
@@ -26,6 +27,7 @@ class TestDivides {
 	}
 
 	@Test
+	@DisplayName("Divides constructor should reject null parameter list")
 	void testConstructor1() {
 		// It should not be possible to create an expression without null parameter list
 		assertThrows(IllegalConstruction.class, () -> op = new Divides(null));
@@ -33,6 +35,7 @@ class TestDivides {
 
 	@SuppressWarnings("AssertBetweenInconvertibleTypes")
 	@Test
+	@DisplayName("Divides expression should not be same as Times expression")
 	void testConstructor2() {
 		// A Times expression should not be the same as a Divides expression
 		try {
@@ -43,6 +46,7 @@ class TestDivides {
 	}
 
 	@Test
+	@DisplayName("Two similar Divides expressions should be equal")
 	void testEquals() {
 		// Two similar expressions, constructed separately (and using different constructors) should be equal
 		List<Expression> p = Arrays.asList(new MyNumber(value1), new MyNumber(value2));
@@ -55,11 +59,13 @@ class TestDivides {
 
 	@SuppressWarnings("ConstantConditions")
 	@Test
+	@DisplayName("Null comparison should not throw exception")
 	void testNull() {
 		assertDoesNotThrow(() -> op==null); // Direct way to to test if the null case is handled.
 	}
 
 	@Test
+	@DisplayName("Two similar Divides expressions should have same hashcode")
 	void testHashCode() {
 		// Two similar expressions, constructed separately (and using different constructors) should have the same hashcode
 		List<Expression> p = Arrays.asList(new MyNumber(value1), new MyNumber(value2));
@@ -68,12 +74,6 @@ class TestDivides {
 			assertEquals(e.hashCode(), op.hashCode());
 		}
 		catch(IllegalConstruction _) { fail(); }
-	}
-
-	@Test
-	void testNullParamList() {
-		params = null;
-		assertThrows(IllegalConstruction.class, () -> op = new Divides(params));
 	}
 
 }

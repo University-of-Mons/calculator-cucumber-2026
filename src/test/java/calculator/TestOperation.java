@@ -7,6 +7,7 @@ import org.junit.jupiter.api.*;
 import java.util.Arrays;
 import java.util.List;
 
+@DisplayName("Operation general tests")
 class TestOperation {
 
 	private Operation o;
@@ -22,21 +23,25 @@ class TestOperation {
 	}
 
 	@Test
+	@DisplayName("Two identical operations should be equal")
 	void testEquals() {
 		assertEquals(o,o2);
 	}
 
 	@Test
+	@DisplayName("Composite operation should have correct depth")
 	void testCountDepth() {
 		assertEquals(2, o.countDepth());
 	}
 
 	@Test
+	@DisplayName("Composite operation should count operations correctly")
 	void testCountOps() {
 		assertEquals(3, o.countOps());
 	}
 
 	@Test
+	@DisplayName("Composite operation should count numbers correctly")
 	void testCountNbs() {
 		assertEquals(Integer.valueOf(6), o.countNbs());
 	}
