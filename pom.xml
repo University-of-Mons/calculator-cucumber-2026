@@ -32,7 +32,7 @@
              without any explicit annotation processing related options needing to be present.
              In order to be enable this in Mavan, we need to turn on full compilation processing: -->
         <maven.compiler.proc>full</maven.compiler.proc>
-        <maven.surefire.version>3.5.4</maven.surefire.version>
+        <maven.surefire.version>3.5.5</maven.surefire.version>
         <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
 
     </properties>
