@@ -97,7 +97,7 @@ public class MyNumber implements Expression
       // If it had been a Java object, .equals() would be needed
   }
 
-    /** The method hashCode needs to be overridden it the equals method is overridden;
+    /** The method hashCode needs to be overridden if the equals method is overridden;
      * 	otherwise there may be problems when you use your object in hashed collections
      * 	such as HashMap, HashSet, LinkedHashSet.
      *

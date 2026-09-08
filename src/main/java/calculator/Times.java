@@ -16,7 +16,7 @@ public final class Times extends Operation
    * Class constructor specifying a number of Expressions to multiply.
    *
    * @param elist The list of Expressions to multiply
-   * @throws IllegalConstruction    If an empty list of expressions if passed as parameter
+   * @throws IllegalConstruction    If an empty list of expressions is passed as parameter
    * @see #Times(List<Expression>,Notation)
    */
   public /*constructor*/ Times(List<Expression> elist) throws IllegalConstruction {
@@ -29,7 +29,7 @@ public final class Times extends Operation
    *
    * @param elist The list of Expressions to multiply
    * @param n The Notation to be used to represent the operation
-   * @throws IllegalConstruction    If an empty list of expressions if passed as parameter
+   * @throws IllegalConstruction    If an empty list of expressions is passed as parameter
    * @see #Times(List<Expression>)
    * @see Operation#Operation(List<Expression>,Notation)
    */

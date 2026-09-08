@@ -17,7 +17,7 @@ public final class Plus extends Operation
    * Class constructor specifying a number of Expressions to add.
    *
    * @param elist The list of Expressions to add
-   * @throws IllegalConstruction    If an empty list of expressions if passed as parameter
+   * @throws IllegalConstruction    If an empty list of expressions is passed as parameter
    * @see #Plus(List<Expression>,Notation)
    */
   public /*constructor*/ Plus(List<Expression> elist) throws IllegalConstruction {
@@ -30,7 +30,7 @@ public final class Plus extends Operation
    *
    * @param elist The list of Expressions to add
    * @param n The Notation to be used to represent the operation
-   * @throws IllegalConstruction    If an empty list of expressions if passed as parameter
+   * @throws IllegalConstruction    If an empty list of expressions is passed as parameter
    * @see #Plus(List<Expression>)
    * @see Operation#Operation(List<Expression>,Notation)
    */

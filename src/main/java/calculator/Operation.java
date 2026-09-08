@@ -193,7 +193,7 @@ public abstract class Operation implements Expression
 		return this.args.equals(other.getArgs());
 	  }
 
-	/** The method hashCode needs to be overridden it the equals method is overridden;
+	/** The method hashCode needs to be overridden if the equals method is overridden;
 	 * 	otherwise there may be problems when you use your object in hashed collections
 	 * 	such as HashMap, HashSet, LinkedHashSet.
 	 *
