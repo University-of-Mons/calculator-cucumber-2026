@@ -13,7 +13,7 @@ import java.util.List;
 @DisplayName("Notation format tests")
 class TestNotation {
 
-    /* This is an auxilary method to avoid code duplication.
+    /* This is an auxiliary method to avoid code duplication.
      */
 	void testNotation(String s,Operation o,Notation n) {
 		assertEquals(s, o.toString(n));
@@ -21,7 +21,7 @@ class TestNotation {
 		assertEquals(s, o.toString());
 	}
 
-	/* This is an auxilary method to avoid code duplication.
+	/* This is an auxiliary method to avoid code duplication.
      */
 	void testNotations(String symbol,int value1,int value2,Operation op) {
 		//prefix notation:

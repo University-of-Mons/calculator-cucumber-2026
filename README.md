@@ -1,4 +1,4 @@
-[![](https://img.shields.io/github/v/release/University-of-Mons/calculator-cucumber-2026?label=Latest%20Release)](https://github.com/University-of-Mons/calculator-cucumber/releases/latest)
+[![](https://img.shields.io/github/v/release/University-of-Mons/calculator-cucumber-2026?label=Latest%20Release)](https://github.com/University-of-Mons/calculator-cucumber-2026/releases/latest)
 
 
 Code quality: ![Maven Build](https://github.com/University-of-Mons/calculator-cucumber-2026/actions/workflows/maven.yml/badge.svg)
@@ -37,14 +37,14 @@ The BDD scenarios are specified as .feature files in the src\test\resources dire
 
 ### Test reporting, test coverage and JavaDoc
 
-* Test reports in html format will be generated somewherein the target/ directory.
+* Test reports in html format will be generated somewhere in the target/ directory.
 *  In addition to testing the code, "mvn test" will also generate a test coverage report (in HTML format) using JaCoCo. This test coverage is generated in target/site/jacoco.
 *  When packaging the code using "mvn package" the JavaDoc code documentation will be generated and stored in target/site/apidocs.
 
 ## Built With
 
 *  [Maven](https://maven.apache.org/) - an open source build automation and dependency management tool
-*  [JUni6](https://junit.org) - a unit testing framework for Java
+*  [JUnit 6](https://junit.org) - a unit testing framework for Java
 *  [Cucumber](https://cucumber.io/docs/cucumber/) - a tool for Behaviour-Driven Development
 *  [JaCoCo](https://www.jacoco.org) - a code coverage library for Java
 *  [JavaDoc](https://docs.oracle.com/en/java/javase/25/javadoc/) - a code documentation tool for Java
